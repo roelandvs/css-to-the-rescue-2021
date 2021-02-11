@@ -8,7 +8,7 @@ De opdracht die ik gekozen heb is een menu maken. Dit menu wil ik gaan baseren o
 
 Print stylesheet kies ik omdat het erg goed bij een kaart van een restaurant past, en omdat het mij ook erg leuk lijkt om een poster te maken van een menukaart.
 
-### Mijn restricites:
+### Mijn restricties:
 - 2 kleuren gebruiken
 - SVG toepassen in shapes, masks én filters
 

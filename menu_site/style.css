@@ -1,0 +1,88 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('./fonts/Inter.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 50px 100px;
+    font-family: 'Inter', sans-serif;
+}
+
+header {
+    font-variation-settings: 'wght' 650;
+}
+
+header svg {
+    width: 100%;
+}
+
+header path {
+    animation: sizeBlobs 8s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite;
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    fill: #000;
+}
+
+header text {
+    font-weight: 700;
+    font-size: 3em;
+}
+
+section:not(:first-child) {
+    margin-bottom: 50px;
+    display: none;
+}
+
+@keyframes sizeBlobs {
+    0%{ transform: scale(0); }
+    20%, 70% { transform: scale(1); }
+    90%, 100%{ transform: scale(0);}
+}
+
+/* @font-face {
+    font-family: 'Frauces';
+    src: url('./fonts/Fraunces.woff2');
+}
+
+
+
+body {
+    font-family: 'Inter', Helvetica, sans-serif;
+    margin: 50px 100px;
+}
+
+h1 {
+    font-size: 5em;;
+    font-family: 'Inter';
+    font-variation-settings: 'wght' 275;
+}
+
+h1 span:first-child {
+    animation: 5s infinite fontWeightChange;
+}
+
+h1 span:nth-child(2) {
+    animation: 5s 0.2s ease infinite fontWeightChange;
+}
+
+h1 span:nth-child(3) {
+    animation: 5s 0.4s ease infinite fontWeightChange;
+}
+
+p {
+    font-weight: 200;
+}
+*/
+
+
+
+/* @keyframes fontWeightChange {
+    0%, 100% { font-variation-settings: 'wght' 275; }
+    15% { font-variation-settings: 'wght' 800; }
+    40% { font-variation-settings: 'wght' 275; }
+}  */
