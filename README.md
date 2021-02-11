@@ -1,7 +1,6 @@
 # Week 2
 <img width="734" alt="Screenshot 2021-02-11 at 20 42 42" src="https://user-images.githubusercontent.com/59770136/107689912-b791f180-6ca9-11eb-8e17-82550848b268.png">
 
-
 ## Mijn (nieuwe) opdracht
 Ik merkte dat ik totaal niet uit de opdracht kwam die ik vorige week bedacht had. Ik zat compleet vast in m'n concept. Hierdoor merkte ik dat ik meer aan de slag moest gaan met een losser concept. 
 
@@ -33,6 +32,8 @@ De grootste uitdaging zal gaan liggen bij het animeren van SVG's denk ik. Voor d
 Ondanks dat de pagina waarschijnlijk erg willekeurig lijkt zal ik er veel van opsteken om in de toekomst te kunnen gebruiken. Ook zijn deze "willekeurige" technieken leuk om een opvallende CV van te maken.
 
 Voor de rest zullen technieken leren zoals Grid en CSS variabele gebruikt worden in bijna alle sites die ik zal maken in de toekomst.
+
+<br>
 
 # Week 1
 ## Mijn opdracht
