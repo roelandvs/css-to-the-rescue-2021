@@ -14,34 +14,76 @@ main {
     perspective-origin: center center;
 }
 
-section {
-    position: absolute;
-    top: 0;
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
-    border: 1px solid coral;
-    width: 25vw;
-    height: 40vw;
-}
-
-#a4 {
+/* gehele a4 */
+main > section {
+    position: relative;
     transform-style: preserve-3d;
     transform-origin: left;
+    /* Waarom transitiont hij niet mooi terug? */
     transition: transform 1s ease-in-out;
     transform: rotatey(0deg);
 }
 
-main:hover #a4 {
-    transform: rotatey(-180deg);
+main > section:nth-of-type(1) {
+    z-index: 10;
 }
 
-#pagina-1 {
+main > section:nth-of-type(2) {
+    z-index: 5;
+}
+
+/* alle pagina's */
+section section {
+    position: absolute;
+    top: 0;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    border: 3px solid grey;
+    width: 25vw;
+    height: 40vw;
+}
+
+/* alle rechter pagina's */
+section section:nth-child(odd) {
+    border-radius: 0 6px 6px 0;
+}
+
+/* alle linker pagina's */
+section section:nth-child(even) {
+    border-radius: 6px 0 0 6px;
+}
+
+/* pagina 1 */
+label section:nth-child(1) {
     display: inherit;
     background-color: coral;
 }
 
-#pagina-2 {
+/* pagina 2 */
+label section:nth-child(2) {
     display: inherit;
     background-color: blue;
     transform: rotatey(180deg);
+}
+
+input {
+    display: none;
+}
+
+input:checked + section {
+    /* -webkit-animation: flipPage 1s 1 alternate forwards; */
+    transform: rotatey(-180deg);
+    animation: changeZIndex 2s forwards;
+    /* z-index: 0; */
+}
+
+#binnenkant {
+    color: #FFF;
+    font-size: 3em;
+}
+
+@keyframes changeZIndex {
+    to {
+        z-index: 0;
+    }
 }
