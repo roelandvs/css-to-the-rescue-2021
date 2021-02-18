@@ -68,8 +68,13 @@ main > section:last-of-type section {
     background-color: #383838;
     color: #FFF;
     text-align: center;
-    -webkit-box-shadow: 0px 18px 32px -15px #B7B7B7; 
-    box-shadow: 0px 18px 32px -15px #B7B7B7;
+    border: none;
+    -webkit-box-shadow: 0px 5px 32px -15px #8a8a8a, inset 0px 0px 50px -15px #000000; 
+    box-shadow: 0px 5px 32px -15px #8a8a8a, inset 0px 0px 50px -15px #000000;
+
+    margin-top: 0;
+    width: 27.8vw;
+    height: 41vw;
 }
 
 main > section:first-of-type section:first-of-type p {
@@ -79,9 +84,26 @@ main > section:first-of-type section:first-of-type p {
     color: #f2d200;
 }
 
+main > section:first-of-type section:first-of-type div {
+    height: 100%;
+    width: 2.5%;
+    top: 0;
+    left: 2vw;
+    position: absolute;
+    background-color: #161616; 
+}
+
+main > section:last-of-type section:last-of-type div {
+    height: 100%;
+    width: 2.5%;
+    top: 0;
+    right: 2vw;
+    position: absolute;
+    background-color: #161616; 
+}
 
 /* alle pagina's */
-section section {
+main > section section {
     position: absolute;
     top: 0;
     transform-style: preserve-3d;
@@ -89,7 +111,7 @@ section section {
     border: 2px solid #dbdbdb;
     width: 27vw;
     height: 40vw;
-
+    margin-top: 0.5vw;
     padding: 40px;
 }
 
@@ -125,14 +147,8 @@ input {
 }
 
 input:checked + section {
-    /* -webkit-animation: flipPage 1s 1 alternate forwards; */
     transform: rotatey(-180deg);
     animation: changeZIndex 5s forwards;
-}
-
-#binnenkant {
-    color: #FFF;
-    font-size: 3em;
 }
 
 @keyframes changeZIndex {
