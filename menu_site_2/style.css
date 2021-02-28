@@ -6,7 +6,7 @@
 
 body {
     min-height: 100vh;
-    /* background-color: lightgray; */
+    font-family: 'Helvetica';
 }
 
 h1 {
@@ -63,6 +63,14 @@ main > section:nth-of-type(4) {
     z-index: 7;
 }
 
+main > section:nth-of-type(5) {
+    z-index: 6;
+}
+
+main > section:nth-of-type(6) {
+    z-index: 5;
+}
+
 /* kaft */
 main > section:first-of-type section,
 main > section:last-of-type section {
@@ -109,6 +117,7 @@ main > section section {
     top: 0;
     transform-style: preserve-3d;
     backface-visibility: hidden;
+    background-color: #fffef5;
     border: 2px solid #dbdbdb;
     width: 27vw;
     height: 40vw;
@@ -133,13 +142,11 @@ section section:nth-child(even) {
 /* elke kant voor */
 label section:nth-child(1) {
     display: inherit;
-    background-color: #fffef0;
 }
 
 /* elke kant achter */
 label section:nth-child(2) {
     display: inherit;
-    background-color: #fffef0;
     transform: rotatey(180deg);
 }
 
@@ -151,6 +158,40 @@ input:checked + section {
     transform: rotatey(-180deg);
     animation: changeZIndex 5s forwards;
 }
+
+/* Test oude code */
+
+h3 {
+    font-size: 1.2em;
+    font-variation-settings: 'wght' 500;
+    flex-basis: 100%;
+}
+
+h3 + p {
+    font-variation-settings: 'wght' 300;
+}
+
+section article {
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section article p {
+    max-width: 300px;
+}
+
+article > div {
+    color: coral;
+    font-size: 1.5em;
+    font-variation-settings: 'wght' 500;
+    margin-left: auto;
+}
+
+/* Eind test oude code */
+
+
 
 @keyframes changeZIndex {
     to {
@@ -165,16 +206,17 @@ input:checked + section {
 }
 
 @media only screen and (max-width: 900px) {
-    html, 
+    /* html, 
     body {
         height: 100vh; 
         width: 100vw; 
-        /* overflow: hidden; */
+        overflow: hidden;
         position: relative;
-    }
+    } */
 
     main {
         background-color: lightblue;
+        overflow: scroll;
         position: absolute;
         height: 100vw;
         width: 100vh;
@@ -194,6 +236,8 @@ input:checked + section {
         top: 0;
         width: 49vh;
         height: 95vw;
+        /* height: auto; */
+        min-height: 600px;
         margin-top: 2.5vw;
         padding: 3vh;
     }
