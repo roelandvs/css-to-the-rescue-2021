@@ -215,7 +215,7 @@ article > div {
     }
 
     main {
-        background-color: lightblue;
+        background-color: rgb(217, 218, 212);
         overflow: scroll;
         position: absolute;
         height: 100vw;
