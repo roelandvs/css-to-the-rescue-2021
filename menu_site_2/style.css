@@ -211,18 +211,18 @@ article > div {
         height: 100vh; 
         width: 100vw; 
         overflow: visible;
+        background-color: rgb(255, 220, 246);
         /* position: relative; */
     }
 
     main {
-        background-color: rgb(192, 202, 235);
         overflow: scroll;
         position: absolute;
         height: 100vw;
         width: 100vh;
         /* Geen idee hoe ik de positionering gefixt heb, maar het werkt */
         left: calc(-1 * (100vh - 100vw) / 2);
-        bottom: calc(-1 * (100vw - 100vh) / 2);
+        top: calc(-1 * (100vw - 100vh) / 2);
         transform: rotate(90deg);
         margin: 0;
         padding-left: 50vh;
