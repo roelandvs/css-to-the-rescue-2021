@@ -215,11 +215,11 @@ article > div {
     }
 
     main {
-        background-color: rgb(204, 224, 207);
+        background-color: rgb(224, 211, 204);
         overflow: scroll;
         position: absolute;
-        height: 100vw;
-        width: 100vh;
+        height: 100vh;
+        width: 100vw;
         /* Geen idee hoe ik de positionering gefixt heb, maar het werkt */
         left: calc(-1 * (100vh - 100vw) / 2);
         top: calc(-1 * (100vw - 100vh) / 2);
