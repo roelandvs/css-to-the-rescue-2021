@@ -91,6 +91,7 @@ main > section:last-of-type section {
     /* -webkit-box-shadow: 0px 7px 50px -4px rgba(0,0,0,0.16); 
     box-shadow: 0px 7px 50px -4px rgba(0,0,0,0.16); */
     overflow: hidden;
+    border: 0;
 }
 
 main > section:first-of-type section:first-of-type svg {
@@ -108,9 +109,7 @@ main > section:first-of-type section:first-of-type text:nth-of-type(2) {
     letter-spacing: 0.2px;
 }
 
-
-
-/* borden */
+/* borden op kaft */
 main > section:first-of-type section:first-of-type > div {
     width: 15vw;
     height: 15vw;
@@ -162,6 +161,9 @@ main > section:first-of-type section:first-of-type > div > div:nth-of-type(2) {
     box-shadow: inset 12px 12px 25px -12px #666666;
 }
 
+main > section:first-of-type section:first-of-type > div:hover {
+    background-color: lightblue;
+}
 
 /* main > section:first-of-type section:first-of-type div {
     height: 100%;
@@ -193,6 +195,8 @@ main > section section {
     height: 40vw;
     margin-top: 0.5vw;
     padding: 40px;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
 }
 
 /* alle rechter pagina's */
@@ -305,5 +309,10 @@ article > div {
         min-height: 600px;
         margin-top: 2.5vw;
         padding: 3vh;
+    }
+
+    main > section:first-of-type section:first-of-type > div {
+        width: 28vh;
+        height: 28vh;
     }
 }
