@@ -9,6 +9,11 @@ body {
     font-family: 'Helvetica';
 }
 
+h1,
+h2 {
+    font-family: 'Roboto Condensed';
+}
+
 h1 {
     font-size: 2.5rem;
 }
@@ -28,6 +33,12 @@ h1 path {
 h1 svg {
     max-width: 600px;
     width: 100%;
+}
+
+h2 {
+    font-size: 2em;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 main {
@@ -78,8 +89,8 @@ main > section:last-of-type section {
     color: #FFF;
     text-align: center;
     border: none;
-    -webkit-box-shadow: 0px 5px 32px -15px #8a8a8a, inset 0px 0px 50px -15px #000000; 
-    box-shadow: 0px 5px 32px -15px #8a8a8a, inset 0px 0px 50px -15px #000000;
+    -webkit-box-shadow: 0px 7px 50px -4px rgba(0,0,0,0.66); 
+    box-shadow: 0px 7px 50px -4px rgba(0,0,0,0.66);
 
     margin-top: 0;
     width: 27.8vw;
@@ -89,7 +100,6 @@ main > section:last-of-type section {
 main > section:first-of-type section:first-of-type p {
     margin-top: 50px;
     font-size: 4em;
-    font-family: 'Charm', cursive;
     color: #f2d200;
 }
 
@@ -117,8 +127,8 @@ main > section section {
     top: 0;
     transform-style: preserve-3d;
     backface-visibility: hidden;
-    background-color: #fffef5;
-    border: 2px solid #dbdbdb;
+    background-color: #ffffff;
+    /* border: 2px solid #dbdbdb; */
     width: 27vw;
     height: 40vw;
     margin-top: 0.5vw;
@@ -127,14 +137,14 @@ main > section section {
 
 /* alle rechter pagina's */
 section section:nth-child(odd) {
-    border-radius: 0 8px 8px 0;
+    /* border-radius: 0 8px 8px 0; */
     -webkit-box-shadow: inset 26px 0px 50px -24px #D3D2C6; 
     box-shadow: inset 26px 0px 50px -24px #D3D2C6;
 }
 
 /* alle linker pagina's */
 section section:nth-child(even) {
-    border-radius: 8px 0 0 8px;
+    /* border-radius: 8px 0 0 8px; */
     -webkit-box-shadow: inset -26px 0px 50px -24px #D3D2C6; 
     box-shadow: inset -26px 0px 50px -24px #D3D2C6;
 }
@@ -163,23 +173,27 @@ input:checked + section {
 
 h3 {
     font-size: 1.2em;
-    font-variation-settings: 'wght' 500;
     flex-basis: 100%;
 }
 
-h3 + p {
-    font-variation-settings: 'wght' 300;
+h2 + p {
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-section article {
-    margin-bottom: 10px;
+section section article {
+    margin-bottom: 8px;
+    padding-bottom: 7px;
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    border-bottom: 1px solid lightgrey;
 }
 
 section article p {
     max-width: 300px;
+    width: 80%;
+    font-weight: 200;
 }
 
 article > div {
@@ -206,16 +220,17 @@ article > div {
 }
 
 @media only screen and (max-width: 900px) {
-    html, 
-    body {
-        height: 100vh; 
-        width: 100vw; 
-        overflow: visible;
-        background-color: rgb(255, 220, 246);
+    /* html,  */
+    /* body { */
+        /* height: 100vh; 
+        width: 100vw;  */
+        /* overflow: visible; */
+        /* background-color: rgb(255, 220, 246); */
         /* position: relative; */
-    }
+    /* } */
 
     main {
+        background-color: rgb(220, 252, 255);
         overflow: scroll;
         position: absolute;
         height: 100vw;
