@@ -304,6 +304,6 @@ article > div {
 
 @media screen and (min-width: 300px) and (max-width: 900px) and (orientation: landscape) {
     main {
-      transform: rotate(-90deg);
+      transform: rotate(-45deg);
     }
   }
