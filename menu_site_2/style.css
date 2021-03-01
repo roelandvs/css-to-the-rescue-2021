@@ -6,19 +6,20 @@
 
 body {
     background-color: #E5E5E5;
+    font-family: 'Roboto Condensed';
 }
 
 h1,
 h2,
 h3,
 main > section:first-of-type section:first-of-type text {
-    font-family: 'Roboto Condensed';
     text-transform: uppercase;
     font-weight: 700;
 }
 
 h1 {
     font-size: 2.5rem;
+    text-align: center;
 }
 
 h1 text {
@@ -39,8 +40,28 @@ h1 svg {
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 2.5em;
     text-align: center;
+}
+
+h3 {
+    font-size: 1.4em;
+    width: 80%;
+    margin-bottom: 5px;
+    max-width: 300px;
+}
+
+p {
+    font-weight: 300;
+}
+
+section article:first-of-type h3 {
+    margin-top: 30px;
+}
+
+h2 + p {
+    text-align: center;
+    text-transform: uppercase;
 }
 
 main {
@@ -55,8 +76,7 @@ main > section {
     position: relative;
     transform-style: preserve-3d;
     transform-origin: left;
-    transition: transform 1.1s;
-    transform: rotatey(0deg);
+    transition:  1.1s;
 }
 
 /* helaas handmatig alle z-indexes */
@@ -82,6 +102,50 @@ main > section:nth-of-type(5) {
 
 main > section:nth-of-type(6) {
     z-index: 5;
+}
+
+/* alle pagina's */
+main > section section {
+    position: absolute;
+    top: 0;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    background-color: #ffffff;
+    /* border: 2px solid #dbdbdb; */
+    width: 27vw;
+    height: 40vw;
+    margin-top: 0.5vw;
+    padding: 40px;
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+}
+
+/* alle rechter pagina's */
+section section:nth-child(odd) {
+}
+
+/* alle linker pagina's */
+section section:nth-child(even) {
+}
+
+/* elke kant voor */
+label section:nth-child(1) {
+    display: inherit;
+}
+
+/* elke kant achter */
+label section:nth-child(2) {
+    display: inherit;
+    transform: rotatey(180deg);
+}
+
+input {
+    display: none;
+}
+
+input:checked + section {
+    transform: rotatey(-180deg);
+    animation: changeZIndex 5s forwards;
 }
 
 /* kaft */
@@ -162,97 +226,18 @@ main > section:first-of-type section:first-of-type > div > div:nth-of-type(2) {
 }
 
 main > section:first-of-type section:first-of-type > div:hover {
-    background-color: lightblue;
-}
-
-/* main > section:first-of-type section:first-of-type div {
-    height: 100%;
-    width: 2.5%;
-    top: 0;
-    left: 2vw;
-    position: absolute;
-    background-color: #161616; 
-}
-
-main > section:last-of-type section:last-of-type div {
-    height: 100%;
-    width: 2.5%;
-    top: 0;
-    right: 2vw;
-    position: absolute;
-    background-color: #161616; 
-} */
-
-/* alle pagina's */
-main > section section {
-    position: absolute;
-    top: 0;
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
-    background-color: #ffffff;
-    /* border: 2px solid #dbdbdb; */
-    width: 27vw;
-    height: 40vw;
-    margin-top: 0.5vw;
-    padding: 40px;
-    border-left: 1px solid lightgray;
-    border-right: 1px solid lightgray;
-}
-
-/* alle rechter pagina's */
-section section:nth-child(odd) {
-    /* border-radius: 0 8px 8px 0; */
-    /* -webkit-box-shadow: inset 26px 0px 50px -24px #D3D2C6; 
-    box-shadow: inset 26px 0px 50px -24px #D3D2C6; */
-}
-
-/* alle linker pagina's */
-section section:nth-child(even) {
-    /* border-radius: 8px 0 0 8px; */
-    /* -webkit-box-shadow: inset -26px 0px 50px -24px #D3D2C6; 
-    box-shadow: inset -26px 0px 50px -24px #D3D2C6; */
-}
-
-/* elke kant voor */
-label section:nth-child(1) {
-    display: inherit;
-}
-
-/* elke kant achter */
-label section:nth-child(2) {
-    display: inherit;
-    transform: rotatey(180deg);
-}
-
-input {
-    display: none;
-}
-
-input:checked + section {
-    transform: rotatey(-180deg);
-    animation: changeZIndex 5s forwards;
+    /* background-color: lightblue; */
 }
 
 
 
 /* Test oude code */
-
-h3 {
-    font-size: 1.2em;
-    flex-basis: 100%;
-}
-
-h2 + p {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
 section section article {
-    margin-bottom: 8px;
-    padding-bottom: 7px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
     position: relative;
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-wrap: wrap; */
     border-bottom: 1px solid lightgrey;
 }
 
@@ -263,10 +248,10 @@ section article p {
 }
 
 article > div {
-    color: coral;
     font-size: 1.5em;
-    font-variation-settings: 'wght' 500;
-    margin-left: auto;
+    font-weight: 700;
+    float: right;
+    margin-top: -40px;
 }
 
 /* Eind test oude code */
@@ -304,15 +289,21 @@ article > div {
     main > section section {
         position: absolute;
         top: 0;
-        width: 49vh;
+        width: 46vh;
         height: 95vw;
         min-height: 600px;
-        margin-top: 2.5vw;
-        padding: 3vh;
+        margin-top: 5vw;
+        padding: 5vh 4vh;
     }
 
     main > section:first-of-type section:first-of-type > div {
-        width: 28vh;
-        height: 28vh;
+        width: 26vh;
+        height: 26vh;
     }
 }
+
+@media screen and (min-width: 300px) and (max-width: 900px) and (orientation: landscape) {
+    main {
+      transform: rotate(-90deg);
+    }
+  }
