@@ -28,6 +28,103 @@ main {
 	transform-style: preserve-3d;
 }
 
+article {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    border-bottom: 1px solid lightgrey;
+}
+
+
+/* typografie */
+h1,
+h2,
+h3,
+main > section:first-of-type section:first-of-type text {
+    text-transform: uppercase;
+    font-weight: var(--font-bold);
+}
+
+h1 {
+    font-size: 2em;
+    text-align: center;
+}
+
+h1 text {
+    font-size: 3em;
+}
+
+h1 path {
+    animation: sizeBlobs 8s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite;
+    transform-origin: 50% 50%;
+    transform-box: fill-box;
+    fill: var(--text-color);
+}
+
+h1 svg {
+    max-width: 600px;
+    width: 100%;
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.2em;
+    width: 80%;
+    margin-bottom: 3px;
+    max-width: 300px;
+}
+
+section article:first-of-type h3 {
+    margin-top: 30px;
+}
+
+p {
+    font-weight: var(--font-light);
+}
+
+h2 + p {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section article p {
+    max-width: 350px;
+    width: 80%;
+    font-weight: 200;
+}
+
+text {
+    fill: var(--text-color);
+}
+
+main > section:first-of-type section:first-of-type text {
+    font-size: 1.4em;
+}
+
+main > section:first-of-type section:first-of-type text:nth-of-type(2) {
+    font-size: 0.38em;
+    font-weight: var(--font-regular);
+    letter-spacing: 0.2px;
+}
+
+blockquote {
+    margin: 20px auto;
+    width: 100%;
+    text-align: center;
+}
+
+article > div {
+    font-size: 1.5em;
+    font-weight: var(--font-bold);
+    float: right;
+    margin-top: -35px;
+}
+
+
 /* gehele a4 */
 main > section {
 	position: absolute;
@@ -46,13 +143,21 @@ main > section label {
 	display: flex;
     overflow: auto;
     max-width: 550px;
+    background-color: var(--background-color-paper);
     border-left: 1px solid var(--background-color);
     border-right: 1px solid var(--background-color);
 }
 
+/* content van paginas */
+section > label section {
+    width: 100%;
+    padding: 40px;
+    position: relative;
+    backface-visibility: hidden;
+}
+
 /* alle rechter kanten */
 main > section label:first-child {
-	background-color: dodgerblue;
 	transform-origin: left center;
 }
 
@@ -61,16 +166,7 @@ main > section label:last-child {
 	position: absolute;
 	left: 0; 
     top: 0;
-	background-color: darkTurquoise;
 	transform: rotatey(180deg);
-}
-
-/* content van pagina */
-section > label section {
-    width: 100%;
-    padding: 40px;
-    position: relative;
-    backface-visibility: hidden;
 }
 
 /* kaft */
@@ -99,6 +195,7 @@ main > section:first-of-type label:first-of-type section > div {
     position: absolute;
     -webkit-box-shadow: 12px 12px 20px -4px rgba(0,0,0,0.45); 
     box-shadow: 12px 12px 20px -4px rgba(0,0,0,0.45);
+    pointer-events: none;
 }
 
 /* bord 1 */
@@ -119,7 +216,7 @@ main > section:first-of-type section:first-of-type > div:nth-of-type(3) {
     margin-left: -2.5%;
 }
 
-/* binnenkant elk bord */
+/* binnen rondje bord */
 main > section:first-of-type section:first-of-type > div > div {
     position: absolute;
     background-color: #F6F6F6;
@@ -142,33 +239,16 @@ main > section:first-of-type section:first-of-type > div > div:nth-of-type(2) {
     box-shadow: inset 12px 12px 25px -12px #929292;
 }
 
-
-
-
-
-
-
-
-
-
-
-
+/* Overige styling */
 main > section:first-of-type section:first-of-type svg {
     width: 60%;
     margin: 10% auto 0;
 }
 
-main > section:first-of-type section:first-of-type text {
-    font-size: 1.4em;
+input[type='radio'] {
+    position: absolute;
+    opacity: 0;
 }
-
-main > section:first-of-type section:first-of-type text:nth-of-type(2) {
-    font-size: 0.38em;
-    font-weight: var(--font-regular);
-    letter-spacing: 0.2px;
-}
-
-
 
 
 input:checked + input + section ~ section,
@@ -217,3 +297,11 @@ main > section:nth-of-type(8) {
 	--endAngle:-179.3deg;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #262626;
+        --background-color-paper: #404040;
+        --text-color: #FFF;
+        --theme-color: #000;
+    }
+}
