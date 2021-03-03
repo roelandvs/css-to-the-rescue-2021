@@ -461,11 +461,3 @@ body {
     }
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background-color: #262626;
-        --background-color-paper: #404040;
-        --text-color: #FFF;
-        --theme-color: #000;
-    }
-}

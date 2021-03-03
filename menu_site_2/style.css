@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+	transform-style: preserve-3d;
+
 }
 
 :root {
@@ -18,11 +20,14 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: 'Roboto Condensed';
+    width: 100%;
+    height: 100%;
 }
 
 main {
     padding-left: 50vw;
     height: 100vh;
+    width: 100vw;
     /* perspective: 300em; */
     perspective-origin: center center;
 	transform-style: preserve-3d;
@@ -79,7 +84,7 @@ h3 {
 }
 
 section article:first-of-type h3 {
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 p {
@@ -136,9 +141,10 @@ main > section {
 
 /* alle pagina's */
 main > section label {
-	height: 60vmin;
-	width: 40vmin;
-    margin-top: 100px;
+	width: 60vmin;
+    height: 90vmin;
+    max-width: 45vw;
+    margin-top: 5vmin;
 	backface-visibility: hidden;
 	display: flex;
     overflow: auto;
@@ -186,8 +192,8 @@ main > section:first-of-type label:first-of-type:hover {
 
 /* borden op kaft */
 main > section:first-of-type label:first-of-type section > div {
-    width: 26vw;
-    height: 26vw;
+    width: 34vmin;
+    height: 34vmin;
     max-width: 300px;
     max-height: 300px;
     background-color: #F6F6F6;
@@ -250,11 +256,16 @@ input[type='radio'] {
     opacity: 0;
 }
 
+section > article:last-of-type {
+    padding-bottom: 70px;
+    border-bottom: 1px solid var(--background-color-paper);
+}
+
 
 input:checked + input + section ~ section,
 input:checked + section ~ section,
 input:checked + section {
-	transform: perspective(100em) rotatey(var(--startAngle));
+	transform: perspective(200em) rotatey(var(--startAngle));
 }
 
 main > section:nth-of-type(1) {
@@ -295,6 +306,88 @@ main > section:nth-of-type(7) {
 main > section:nth-of-type(8) {
 	--startAngle:-0deg;
 	--endAngle:-179.3deg;
+}
+
+body::-webkit-scrollbar,
+main > section label::-webkit-scrollbar {
+    display: none;
+}
+
+body,
+main > section label {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+@keyframes sizeBlobs {
+    0%{ transform: scale(0); }
+    20%, 70% { transform: scale(1); }
+    90%, 100%{ transform: scale(0);}
+}
+
+@media (orientation: portrait) {
+    main > section label {
+        width: 45vmin;
+        height: 70vmin;
+    }
+
+    /* borden op kaft */
+    main > section:first-of-type label:first-of-type section > div {
+        width: 25vmin;
+        height: 25vmin;
+    }
+}
+
+@media only screen and (max-width: 900px) and (orientation: portrait){
+    main {
+        height: 100vw;
+        /* width: 100vh; */
+        /* left: calc(-1 * (100vh - 100vw) / 2);
+        top: calc(-1 * (100vw - 100vh) / 2); */
+        transform: rotate(90deg);
+        /* margin: 0; */
+        padding-left: 50vh;
+    }
+
+    /* alle pagina's */
+    main > section label {
+        width: 60vmin;
+        height: 90vmin;
+        max-width: 45vw;
+        margin-top: 5vmin;
+        backface-visibility: hidden;
+        display: flex;
+        overflow: auto;
+        max-width: 550px;
+        background-color: var(--background-color-paper);
+        border-left: 1px solid var(--background-color);
+        border-right: 1px solid var(--background-color);
+    }
+
+    /* content van paginas */
+    section > label section {
+        width: 100%;
+        padding: 40px;
+    }
+
+    /* borden op kaft */
+    main > section:first-of-type label:first-of-type section > div {
+        width: 34vmin;
+        height: 34vmin;
+    }
+
+}
+
+@media only screen and (min-width: 1000px) {
+    main > section label {
+        max-height: 850px;
+    }
+}
+
+@media only screen and (min-height: 900px) and (min-width: 1000px) {
+    main > section label {
+        margin-top: calc((100vh - 850px) / 2);
+    }
 }
 
 @media (prefers-color-scheme: dark) {
