@@ -187,7 +187,7 @@ main > section:last-of-type label {
 }
 
 main > section:first-of-type label:first-of-type:hover {
-    transform: rotatey(-10deg);
+    transform: rotatey(-30deg);
 }
 
 /* borden op kaft */
@@ -298,16 +298,6 @@ main > section:nth-of-type(6) {
 	--endAngle:-179.5deg;
 }
 
-main > section:nth-of-type(7) {
-	--startAngle:-0.1deg;
-	--endAngle:-179.4deg;
-}
-
-main > section:nth-of-type(8) {
-	--startAngle:-0deg;
-	--endAngle:-179.3deg;
-}
-
 body::-webkit-scrollbar,
 main > section label::-webkit-scrollbar {
     display: none;
@@ -397,5 +387,71 @@ main > section label {
         --background-color-paper: #404040;
         --text-color: #FFF;
         --theme-color: #000;
+    }
+}
+
+@media print {
+    html,
+    body,
+    main,
+    main > section,
+    main > section label {
+        height: 100%;
+    }
+    
+    h2 {
+        font-size: 2em;
+        text-align: center;
+    }
+    
+    h3 {
+        font-size: 1em;
+        margin-bottom: 3px;
+    }
+    
+    section article:first-of-type h3 {
+        margin-top: 20px;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    main > section:first-of-type label,
+    main > section:last-of-type label,
+    main > section label {
+        border: 1px solid var(--background-color);
+    }
+
+    main > section {
+        position: relative;
+    }
+
+    main > section:first-of-type label,
+    main > section:last-of-type label {
+        box-shadow: none;
+    }
+
+    main > section > label {
+        margin-top: 0;
+    }
+
+    main > section label {
+        position: relative;
+        transform: rotateY(180deg)
+    }
+
+    input:checked + input + section ~ section,
+    input:checked + section ~ section,
+    input:checked + section {
+        transform: rotateY(180deg);
+    }
+
+    main > section:nth-of-type(6) label:first-of-type {
+       display: none;
+    }
+
+    @keyframes sizeBlobs {
+        0%, 100%{ transform: scale(1); }
     }
 }
