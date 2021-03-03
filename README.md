@@ -74,6 +74,8 @@ Voor de rest zullen technieken leren zoals Grid en CSS variabele gebruikt worden
 <br>
 
 # Week 3
+<img width="1683" alt="Screenshot 2021-03-03 at 17 40 46" src="https://user-images.githubusercontent.com/59770136/109839725-b1a78480-7c47-11eb-9f8a-29f9470ff68d.png">
+
 ## Mijn (weer nieuwe) opdracht
 Ik ben deze week wederom compleet overnieuw begonnen. De blobs vond ik toch niet interessant. Ik ben nu van plan om een 3D menu kaart te gaan maken. Ik wil hem op computer hem helemaal laten werken als een echt menu boekje.
 
@@ -85,6 +87,7 @@ Ik ben deze week wederom compleet overnieuw begonnen. De blobs vond ik toch niet
 - SVG toepassen in shapes, masks én filters
 
 ## CSS Technieken
+
 Ik ga me bijna volledig focussen op `3d transforms` om het boekje werkend te krijgen. Ook ga ik nog wat doen met **`SVG toepassen in shapes, masks én filters`**. Ook ben ik van plan om `custom properties` te gaan gebruiken. Dit zorgt er voor dat de code makkelijker wordt om aan te passen, en vooral dat een dark mode mogelijk is om te maken.
 
 ## Grootste Uitdaging

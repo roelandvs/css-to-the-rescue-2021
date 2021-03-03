@@ -132,7 +132,7 @@ article > div {
 main > section {
 	position: absolute;
 	transform-origin: left center;
-	transform: perspective(150em) rotatey(var(--endAngle));
+	transform: perspective(150em) rotatey(var(--angleRight));
 	transform-style: preserve-3d;
 	transition: 1s transform;
 }
@@ -263,37 +263,37 @@ section > article:last-of-type {
 input:checked + input + section ~ section,
 input:checked + section ~ section,
 input:checked + section {
-	transform: perspective(200em) rotatey(var(--startAngle));
+	transform: perspective(200em) rotatey(var(--angleLeft));
 }
 
 main > section:nth-of-type(1) {
-	--startAngle:-0.7deg;
-	--endAngle:-180deg;
+	--angleLeft: -0.7deg;
+	--angleRight: -180deg;
 }
 
 main > section:nth-of-type(2) {
-	--startAngle:-0.6deg;
-	--endAngle:-179.9deg;
+	--angleLeft: -0.6deg;
+	--angleRight: -179.9deg;
 }
 
 main > section:nth-of-type(3) {
-	--startAngle:-0.5deg;
-	--endAngle:-179.8deg;
+	--angleLeft: -0.5deg;
+	--angleRight: -179.8deg;
 }
 
 main > section:nth-of-type(4) {
-	--startAngle:-0.4deg;
-	--endAngle:-179.7deg;
+	--angleLeft: -0.4deg;
+	--angleRight: -179.7deg;
 }
 
 main > section:nth-of-type(5) {
-	--startAngle:-0.3deg;
-	--endAngle:-179.6deg;
+	--angleLeft: -0.3deg;
+	--angleRight: -179.6deg;
 }
 
 main > section:nth-of-type(6) {
-	--startAngle:-0.2deg;
-	--endAngle:-179.5deg;
+	--angleLeft: -0.2deg;
+	--angleRight: -179.5deg;
 }
 
 body::-webkit-scrollbar,
@@ -364,6 +364,10 @@ main > section label {
         width: 45vw;
         height: 95vh;
         margin-top: 5vw;
+    }
+
+    section > label section {
+        padding: 6vw 5vw;
     }
 
     /* borden op kaft */
