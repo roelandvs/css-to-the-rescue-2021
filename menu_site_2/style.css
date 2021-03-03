@@ -127,6 +127,10 @@ article > div {
     margin-top: -35px;
 }
 
+main > section:first-of-type section:first-of-type svg {
+    width: 60%;
+    margin: 10% auto 0;
+}
 
 /* gehele a4 */
 main > section {
@@ -243,12 +247,6 @@ main > section:first-of-type section:first-of-type > div > div:nth-of-type(2) {
     box-shadow: inset 12px 12px 25px -12px #929292;
 }
 
-/* Overige styling */
-main > section:first-of-type section:first-of-type svg {
-    width: 60%;
-    margin: 10% auto 0;
-}
-
 input[type='radio'] {
     position: absolute;
     opacity: 0;
@@ -259,7 +257,7 @@ section > article:last-of-type {
     border-bottom: 1px solid var(--background-color-paper);
 }
 
-
+/* rotatie */
 input:checked + input + section ~ section,
 input:checked + section ~ section,
 input:checked + section {
@@ -363,7 +361,7 @@ main > section label {
     main > section label {
         width: 45vw;
         height: 95vh;
-        margin-top: 5vw;
+        margin-top: 5vh;
     }
 
     section > label section {
