@@ -326,16 +326,17 @@ main > section label {
 @media only screen and (max-width: 900px) and (orientation: portrait) {
     body {
         height: 100vh;
+        padding-top: 100vh;
     }
 
     main {
         position: absolute;
         height: 100vw;
-        width: 0;
+        /* width: 0; */
         transform: rotate(90deg);
         padding: 0;
-        padding-right: 50vh;
-        margin-top: 50vh;
+        /* padding-right: 50vh; */
+        margin-top: -50vh;
         /* left: calc(-1 * (100vh - 100vw) / 2); */
         /* top: calc(-1 * (100vw - 100vh) / 2); */
     }
