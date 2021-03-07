@@ -330,6 +330,14 @@ main > section label {
         padding-left: 50vh;
     }
 
+    h2 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.1em;
+    }
+
     /* alle pagina's */
     main > section label {
         width: 45vh;
@@ -341,6 +349,10 @@ main > section label {
     section > label section {
         width: 100%;
         padding: 5vh;
+    }
+
+    main > section:first-of-type label:first-of-type section {
+        height: 60vh;
     }
 
     /* borden op kaft */
