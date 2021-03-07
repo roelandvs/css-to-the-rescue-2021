@@ -332,9 +332,10 @@ main > section label {
         position: absolute;
         height: 100vw;
         transform: rotate(90deg);
-        padding-left: 100vh;
-        margin-top: -50vw;
-        left: calc(-1 * (100vh - 100vw) / 2);
+        padding: 0;
+        /* padding-left: 100vh; */
+        margin-top: 50vh;
+        /* left: calc(-1 * (100vh - 100vw) / 2); */
         /* top: calc(-1 * (100vw - 100vh) / 2); */
     }
 
