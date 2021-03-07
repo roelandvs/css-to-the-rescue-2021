@@ -324,6 +324,10 @@ main > section label {
 }
 
 @media only screen and (max-width: 900px) and (orientation: portrait) {
+    body {
+        height: 100vh;
+    }
+
     main {
         height: 100vw;
         transform: rotate(90deg);
@@ -349,10 +353,6 @@ main > section label {
     section > label section {
         width: 100%;
         padding: 5vh;
-    }
-
-    main > section:first-of-type label:first-of-type section {
-        height: 60vh;
     }
 
     /* borden op kaft */
